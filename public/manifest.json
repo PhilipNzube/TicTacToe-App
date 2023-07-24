@@ -1,0 +1,25 @@
+{
+  "short_name": "TicTacToe",
+  "name": "TicTacToeApp App",
+  "icons": [
+    {
+      "src": "ICON.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "ICON192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "ICON512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "rgb(199, 196, 194)"
+}

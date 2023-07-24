@@ -1,0 +1,1551 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: black;
+  width: 98%;
+  height: 100%;
+}
+
+@media only screen and (min-width:700px) {
+  #Loader {
+    cursor: wait;
+    position: fixed;
+    left: 35%;
+    top: 50%;
+    font-weight: bold;
+    font-size: 400%;
+    animation-name: FadeIn;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+  }
+
+
+  #AppName {
+    text-shadow: 0 0 50px white;
+    position: relative;
+    left: 0%;
+    transition: all 1s;
+    color: rgb(199, 196, 194);
+    animation-name: FadeOutIn;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  #AppName2 {
+    text-shadow: 0 0 50px red;
+    position: relative;
+    transition: all 1s;
+    color: red;
+    animation-name: FadeOutIn;
+    animation-delay: 2s;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  #AppName3 {
+    text-shadow: 0 0 50px white;
+    position: relative;
+    right: 0%;
+    transition: all 1s;
+    color: rgb(199, 196, 194);
+    animation-name: FadeOutIn;
+    animation-delay: 4s;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes FadeOutIn {
+    50% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes ScaleOut {
+    0% {
+      text-shadow: 0 0 25px red;
+    }
+
+    100% {
+      opacity: 0;
+      font-size: 400%;
+    }
+  }
+
+  #MainContainer {
+    display: none;
+    animation-name: FadeIn;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+  }
+
+  #Container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 150px;
+    left: 20%;
+  }
+
+  @keyframes FadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 1;
+    }
+  }
+
+  #PlayerBox {
+    position: relative;
+    right: 3%;
+    text-align: center;
+    width: 30%;
+    height: 250px;
+    border-radius: 2%;
+    border: 1px solid white;
+    box-shadow: 0 0 10px white;
+    font-size: 200%;
+    text-shadow: 0 0 20px white;
+    color: rgb(199, 196, 194);
+  }
+
+  #PlayerName {
+    position: relative;
+    top: 0px;
+  }
+
+  #EditName {
+    font-weight: bold;
+    position: relative;
+    top: 40px;
+  }
+
+  #PlayerLetter {
+    font-weight: bold;
+    font-size: 400%;
+    position: relative;
+    top: 10px;
+  }
+
+  #EditBut {
+    position: relative;
+    top: -16px;
+    text-align: center;
+    padding: 1%;
+    width: 20%;
+    border-radius: 2%;
+    border: 1px solid white;
+    box-shadow: 0 0 2px white;
+    font-size: 100%;
+    font-weight: bold;
+    text-shadow: 0 0 2px white;
+    color: rgb(199, 196, 194);
+  }
+
+  #EditBut:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px white;
+    text-shadow: 0 0 20px white;
+  }
+
+
+
+
+
+
+
+  #PlayerBox2 {
+    position: relative;
+    left: 2%;
+    text-align: center;
+    width: 30%;
+    height: 250px;
+    border-radius: 2%;
+    border: 1px solid white;
+    box-shadow: 0 0 10px white;
+    font-size: 200%;
+    text-shadow: 0 0 20px white;
+    color: rgb(199, 196, 194);
+  }
+
+
+  #PlayerName2 {
+    position: relative;
+    top: 0px;
+  }
+
+  #EditName2 {
+    font-weight: bold;
+    position: relative;
+    top: 40px;
+  }
+
+  #PlayerLetter2 {
+    font-weight: bold;
+    font-size: 300%;
+    position: relative;
+    top: 30px;
+  }
+
+  #EditBut2 {
+    position: relative;
+    top: 20px;
+    text-align: center;
+    padding: 1%;
+    width: 20%;
+    border-radius: 2%;
+    border: 1px solid white;
+    box-shadow: 0 0 2px white;
+    font-size: 100%;
+    font-weight: bold;
+    text-shadow: 0 0 2px white;
+    color: rgb(199, 196, 194);
+  }
+
+  #EditBut2:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px white;
+    text-shadow: 0 0 20px white;
+  }
+
+  #StartButton {
+    position: relative;
+    top: 200px;
+    text-align: center;
+    padding: 1%;
+    width: 20%;
+    border-radius: 2%;
+    border: 1px solid red;
+    box-shadow: 0 0 2px red;
+    font-size: 200%;
+    font-weight: bold;
+    text-shadow: 0 0 2px red;
+    color: rgb(199, 196, 194);
+  }
+
+  #StartButton:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px red;
+    text-shadow: 0 0 20px red;
+  }
+
+  #PopUp {
+    animation-name: FadeIn;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    display: none;
+    backdrop-filter: blur(0.2em);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.541);
+    width: 100%;
+    height: 100%;
+  }
+
+  #PopUp2 {
+    animation-name: FadeIn;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    display: none;
+    backdrop-filter: blur(0.2em);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.541);
+    width: 100%;
+    height: 100%;
+  }
+
+  #PopUpContent {
+    position: relative;
+    top: 200px;
+    width: 30%;
+    height: 160px;
+    padding: 50px;
+    border-radius: 2%;
+    border: 1px solid white;
+    box-shadow: 0 0 10px white;
+    font-size: 200%;
+    text-shadow: 0 0 20px white;
+    color: rgb(199, 196, 194);
+  }
+
+  #CYN {
+    font-weight: bold;
+    position: relative;
+    bottom: 50px;
+  }
+
+  #YN {
+    position: relative;
+    bottom: 60px;
+  }
+
+  #NameInput {
+    position: relative;
+    bottom: 100px;
+    width: 90%;
+    height: 30px;
+    font-size: large;
+    text-align: center;
+    box-shadow: 0 0 5px white;
+    border: 1px solid white;
+  }
+
+  #NameInput2 {
+    position: relative;
+    bottom: 100px;
+    width: 90%;
+    height: 30px;
+    font-size: large;
+    text-align: center;
+    box-shadow: 0 0 5px white;
+    border: 1px solid white;
+  }
+
+  #PopUpButtons {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    bottom: 60px;
+    left: 15%;
+  }
+
+  #CancelBut {
+    font-size: 100%;
+    font-weight: bold;
+    position: relative;
+    right: 1%;
+    text-align: center;
+    padding: 1%;
+    width: 30%;
+    border-radius: 2%;
+    border: 1px solid red;
+    box-shadow: 0 0 2px red;
+    text-shadow: 0 0 2px red;
+    color: rgb(199, 196, 194);
+  }
+
+  #CancelBut:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px red;
+    text-shadow: 0 0 20px red;
+  }
+
+  #ConfirmBut {
+    font-weight: bold;
+    font-size: 100%;
+    position: relative;
+    left: 1%;
+    filter: blur(0.04em);
+    text-align: center;
+    padding: 1%;
+    width: 30%;
+    border-radius: 2%;
+    border: 1px solid white;
+    box-shadow: 0 0 2px white;
+    text-shadow: 0 0 2px white;
+    color: rgb(199, 196, 194);
+  }
+
+  #ConfirmBut:hover {
+    cursor: not-allowed;
+    box-shadow: 0 0 10px white;
+    text-shadow: 0 0 20px white;
+  }
+
+  #ConfirmBut2 {
+    font-weight: bold;
+    font-size: 100%;
+    position: relative;
+    left: 1%;
+    filter: blur(0.04em);
+    text-align: center;
+    padding: 1%;
+    width: 30%;
+    border-radius: 2%;
+    border: 1px solid white;
+    box-shadow: 0 0 2px white;
+    text-shadow: 0 0 2px white;
+    color: rgb(199, 196, 194);
+  }
+
+  #ConfirmBut2:hover {
+    cursor: not-allowed;
+    box-shadow: 0 0 10px white;
+    text-shadow: 0 0 20px white;
+  }
+
+  #PlayerTurn {
+    text-align: center;
+    font-size: 200%;
+    font-weight: bold;
+    text-shadow: 0 0 20px white;
+    color: rgb(199, 196, 194);
+  }
+
+  #CurrentPlayer {
+    color: red;
+  }
+
+  #MainGameContainer {
+    animation-name: FadeIn;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+  }
+
+  #MainGameContents {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    left: 23%;
+    top: 100px;
+  }
+
+  #Box1 {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 950%;
+    text-align: center;
+    text-shadow: 0 0 20px white;
+    color: rgb(199, 196, 194);
+    width: 25.7%;
+    height: 150px;
+    border-right: 10px solid white;
+    border-bottom: 10px solid white;
+  }
+
+  #Box2 {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 950%;
+    text-align: center;
+    text-shadow: 0 0 20px white;
+    color: rgb(199, 196, 194);
+    width: 25.7%;
+    height: 150px;
+    border-bottom: 10px solid white;
+  }
+
+  #Box3 {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 950%;
+    text-align: center;
+    text-shadow: 0 0 20px white;
+    color: rgb(199, 196, 194);
+    width: 25.7%;
+    height: 150px;
+    border-left: 10px solid white;
+    border-bottom: 10px solid white;
+  }
+
+  #Box4 {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 950%;
+    text-align: center;
+    text-shadow: 0 0 20px white;
+    color: rgb(199, 196, 194);
+    width: 25.7%;
+    height: 150px;
+    border-right: 10px solid white;
+    border-bottom: 10px solid white;
+  }
+
+  #Box5 {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 950%;
+    text-align: center;
+    text-shadow: 0 0 20px white;
+    color: rgb(199, 196, 194);
+    width: 25.7%;
+    height: 150px;
+    border-bottom: 10px solid white;
+  }
+
+  #Box6 {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 950%;
+    text-align: center;
+    text-shadow: 0 0 20px white;
+    color: rgb(199, 196, 194);
+    width: 25.7%;
+    height: 150px;
+    border-left: 10px solid white;
+    border-bottom: 10px solid white;
+  }
+
+  #Box7 {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 950%;
+    text-align: center;
+    text-shadow: 0 0 20px white;
+    color: rgb(199, 196, 194);
+    width: 25.7%;
+    height: 150px;
+    border-right: 10px solid white;
+  }
+
+  #Box8 {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 950%;
+    text-align: center;
+    text-shadow: 0 0 20px white;
+    color: rgb(199, 196, 194);
+    width: 25.7%;
+    height: 150px;
+  }
+
+  #Box9 {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 950%;
+    text-align: center;
+    text-shadow: 0 0 20px white;
+    color: rgb(199, 196, 194);
+    width: 25.7%;
+    height: 150px;
+    border-left: 10px solid white;
+  }
+
+  #Winner {
+    display: none;
+    backdrop-filter: blur(0.2em);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.541);
+    width: 100%;
+    height: 100%;
+  }
+
+  #WinnerContent {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    padding: 1%;
+    border-radius: 2%;
+    border: 1px solid white;
+    box-shadow: 0 0 10px white;
+    font-size: 200%;
+    font-weight: bold;
+    text-shadow: 0 0 20px white;
+    color: rgb(199, 196, 194);
+  }
+
+  #WinnerPlayerName {
+    color: red;
+    text-shadow: 0 0 20px red;
+  }
+
+  #BackButton {
+    cursor: pointer;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    font-size: 200%;
+    font-weight: bold;
+    color: red;
+    text-shadow: 0 0 2px red;
+  }
+
+  #BackButton:hover {
+    text-shadow: 0 0 20px red;
+  }
+
+  #ResetButton {
+    display:none;
+    filter: blur(0.04em);
+    cursor: not-allowed;
+    position: fixed;
+    bottom: 0%;
+    right: 1%;
+    font-size: 200%;
+    font-weight: bold;
+    color: red;
+    text-shadow: 0 0 2px red;
+  }
+
+  #ResetButton:hover {
+    text-shadow: 0 0 20px red;
+  }
+
+  #PlayerScores {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 200%;
+    font-weight: bold;
+    color: red;
+    text-shadow: 0 0 20px red;
+  }
+
+  #PSFlex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #P1Score {
+    text-shadow: 0 0 50px white;
+    color: rgb(199, 196, 194);
+  }
+
+  #P2Score {
+    text-shadow: 0 0 50px white;
+    color: rgb(199, 196, 194);
+  }
+
+  #TimeAndPauseButton {
+    position: fixed;
+    top: 0;
+    right: 0%;
+    font-size: 100%;
+    font-weight: bold;
+    text-shadow: 0 0 50px white;
+    color: rgb(199, 196, 194);
+  }
+
+  #TimeAndPauseButtonFlex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #Time {
+    font-size: 200%;
+    font-weight: bold;
+    text-shadow: 0 0 50px white;
+    color: rgb(199, 196, 194);
+  }
+
+  #PauseButton {
+    align-self: flex-end;
+    width: 38px;
+    font-size: 200%;
+    font-weight: bold;
+    color: red;
+    text-shadow: 0 0 20px red;
+  }
+
+  #PauseButton:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px red;
+    border: 1px solid red;
+  }
+
+  #PauseMenu {
+    display: none;
+    backdrop-filter: blur(0.2em);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.541);
+    width: 100%;
+    height: 100%;
+    animation-name: FadeIn;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+  }
+
+  #PauseMenuContent {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 150px;
+    padding: 1%;
+    border: 1px solid red;
+    box-shadow: 0 0 10px red;
+    font-size: 200%;
+    font-weight: bold;
+    text-shadow: 0 0 2px red;
+    color: rgb(199, 196, 194);
+  }
+
+  #ResumeButton:hover {
+    cursor: pointer;
+    text-shadow: 0 0 20px red;
+  }
+
+  #RestartButton:hover {
+    cursor: pointer;
+    text-shadow: 0 0 20px red;
+  }
+
+  #QuitButton:hover {
+    cursor: pointer;
+    text-shadow: 0 0 20px red;
+  }
+
+  #RestartButton {
+    cursor: pointer;
+    position: relative;
+    top: 20px;
+  }
+
+  #QuitButton {
+    cursor: pointer;
+    position: relative;
+    top: 40px;
+    color: red;
+  }
+
+}
+
+@media only screen and (max-width:700px) {
+  #Loader {
+    cursor: wait;
+    position: fixed;
+    left: 25%;
+    top: 50%;
+    font-weight: bold;
+    font-size: 400%;
+    animation-name: FadeIn;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+  }
+
+
+  #AppName {
+    text-shadow: 0 0 50px white;
+    position: relative;
+    left: 0%;
+    transition: all 1s;
+    color: rgb(199, 196, 194);
+    animation-name: FadeOutIn;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  #AppName2 {
+    text-shadow: 0 0 50px red;
+    position: relative;
+    transition: all 1s;
+    color: red;
+    animation-name: FadeOutIn;
+    animation-delay: 2s;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  #AppName3 {
+    text-shadow: 0 0 50px white;
+    position: relative;
+    right: 0%;
+    transition: all 1s;
+    color: rgb(199, 196, 194);
+    animation-name: FadeOutIn;
+    animation-delay: 4s;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes FadeOutIn {
+    50% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes ScaleOut {
+    0% {
+      text-shadow: 0 0 25px red;
+    }
+
+    100% {
+      opacity: 0;
+      font-size: 400%;
+    }
+  }
+
+  #MainContainer {
+    display: none;
+    animation-name: FadeIn;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+  }
+
+  #Container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 150px;
+    left: 20%;
+  }
+
+  @keyframes FadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 1;
+    }
+  }
+
+  #PlayerBox {
+    position: relative;
+    right: 13%;
+    text-align: center;
+    width: 40%;
+    height: 250px;
+    border-radius: 2%;
+    border: 1px solid white;
+    box-shadow: 0 0 10px white;
+    font-size: 200%;
+    text-shadow: 0 0 20px white;
+    color: rgb(199, 196, 194);
+  }
+
+  #PlayerName {
+    position: relative;
+    top: 0px;
+  }
+
+  #EditName {
+    font-weight: bold;
+    position: relative;
+    top: 40px;
+  }
+
+  #PlayerLetter {
+    font-weight: bold;
+    font-size: 400%;
+    position: relative;
+    top: 10px;
+  }
+
+  #EditBut {
+    position: relative;
+    top: -16px;
+    text-align: center;
+    padding: 1%;
+    width: 20%;
+    border-radius: 2%;
+    border: 1px solid white;
+    box-shadow: 0 0 2px white;
+    font-size: 100%;
+    font-weight: bold;
+    text-shadow: 0 0 2px white;
+    color: rgb(199, 196, 194);
+  }
+
+  #EditBut:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px white;
+    text-shadow: 0 0 20px white;
+  }
+
+
+
+
+
+
+
+  #PlayerBox2 {
+    position: relative;
+    left: -8%;
+    text-align: center;
+    width: 40%;
+    height: 250px;
+    border-radius: 2%;
+    border: 1px solid white;
+    box-shadow: 0 0 10px white;
+    font-size: 200%;
+    text-shadow: 0 0 20px white;
+    color: rgb(199, 196, 194);
+  }
+
+
+  #PlayerName2 {
+    position: relative;
+    top: 0px;
+  }
+
+  #EditName2 {
+    font-weight: bold;
+    position: relative;
+    top: 40px;
+  }
+
+  #PlayerLetter2 {
+    font-weight: bold;
+    font-size: 300%;
+    position: relative;
+    top: 30px;
+  }
+
+  #EditBut2 {
+    position: relative;
+    top: 20px;
+    text-align: center;
+    padding: 1%;
+    width: 20%;
+    border-radius: 2%;
+    border: 1px solid white;
+    box-shadow: 0 0 2px white;
+    font-size: 100%;
+    font-weight: bold;
+    text-shadow: 0 0 2px white;
+    color: rgb(199, 196, 194);
+  }
+
+  #EditBut2:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px white;
+    text-shadow: 0 0 20px white;
+  }
+
+  #StartButton {
+    position: relative;
+    top: 200px;
+    text-align: center;
+    padding: 1%;
+    width: 70%;
+    border-radius: 2%;
+    border: 1px solid red;
+    box-shadow: 0 0 2px red;
+    font-size: 200%;
+    font-weight: bold;
+    text-shadow: 0 0 2px red;
+    color: rgb(199, 196, 194);
+  }
+
+  #StartButton:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px red;
+    text-shadow: 0 0 20px red;
+  }
+
+  #PopUp {
+    animation-name: FadeIn;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    display: none;
+    backdrop-filter: blur(0.2em);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.541);
+    width: 100%;
+    height: 100%;
+  }
+
+  #PopUp2 {
+    animation-name: FadeIn;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    display: none;
+    backdrop-filter: blur(0.2em);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.541);
+    width: 100%;
+    height: 100%;
+  }
+
+  #PopUpContent {
+    position: relative;
+    top: 200px;
+    width: 30%;
+    height: 160px;
+    padding: 50px;
+    border-radius: 2%;
+    border: 1px solid white;
+    box-shadow: 0 0 10px white;
+    font-size: 150%;
+    text-shadow: 0 0 20px white;
+    color: rgb(199, 196, 194);
+  }
+
+  #CYN {
+    font-weight: bold;
+    position: relative;
+    bottom: 50px;
+  }
+
+  #YN {
+    position: relative;
+    bottom: 60px;
+  }
+
+  #NameInput {
+    position: relative;
+    bottom: 60px;
+    width: 90%;
+    height: 30px;
+    font-size: large;
+    text-align: center;
+    box-shadow: 0 0 5px white;
+    border: 1px solid white;
+  }
+
+  #NameInput2 {
+    position: relative;
+    bottom: 60px;
+    width: 90%;
+    height: 30px;
+    font-size: large;
+    text-align: center;
+    box-shadow: 0 0 5px white;
+    border: 1px solid white;
+  }
+
+  #PopUpButtons {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    bottom: 40px;
+    left: 15%;
+  }
+
+  #CancelBut {
+    font-size: 100%;
+    font-weight: bold;
+    position: relative;
+    right: 1%;
+    text-align: center;
+    padding: 1%;
+    width: 30%;
+    border-radius: 2%;
+    border: 1px solid red;
+    box-shadow: 0 0 2px red;
+    text-shadow: 0 0 2px red;
+    color: rgb(199, 196, 194);
+  }
+
+  #CancelBut:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px red;
+    text-shadow: 0 0 20px red;
+  }
+
+  #ConfirmBut {
+    font-weight: bold;
+    font-size: 100%;
+    position: relative;
+    left: 1%;
+    filter: blur(0.04em);
+    text-align: center;
+    padding: 1%;
+    width: 30%;
+    border-radius: 2%;
+    border: 1px solid white;
+    box-shadow: 0 0 2px white;
+    text-shadow: 0 0 2px white;
+    color: rgb(199, 196, 194);
+  }
+
+  #ConfirmBut:hover {
+    cursor: not-allowed;
+    box-shadow: 0 0 10px white;
+    text-shadow: 0 0 20px white;
+  }
+
+  #ConfirmBut2 {
+    font-weight: bold;
+    font-size: 100%;
+    position: relative;
+    left: 1%;
+    filter: blur(0.04em);
+    text-align: center;
+    padding: 1%;
+    width: 30%;
+    border-radius: 2%;
+    border: 1px solid white;
+    box-shadow: 0 0 2px white;
+    text-shadow: 0 0 2px white;
+    color: rgb(199, 196, 194);
+  }
+
+  #ConfirmBut2:hover {
+    cursor: not-allowed;
+    box-shadow: 0 0 10px white;
+    text-shadow: 0 0 20px white;
+  }
+
+  #PlayerTurn {
+    position: relative;
+    top: 25px;
+    text-align: center;
+    font-size: 200%;
+    font-weight: bold;
+    text-shadow: 0 0 20px white;
+    color: rgb(199, 196, 194);
+  }
+
+  #CurrentPlayer {
+    color: red;
+  }
+
+  #MainGameContainer {
+    animation-name: FadeIn;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+  }
+
+  #MainGameContents {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    left: 23%;
+    top: 100px;
+  }
+
+  #Box1 {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 950%;
+    text-align: center;
+    text-shadow: 0 0 20px white;
+    color: rgb(199, 196, 194);
+    width: 27%;
+    height: 140px;
+    border-right: 10px solid white;
+    border-bottom: 10px solid white;
+  }
+
+  #Box2 {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 950%;
+    text-align: center;
+    text-shadow: 0 0 20px white;
+    color: rgb(199, 196, 194);
+    width: 27%;
+    height: 140px;
+    border-bottom: 10px solid white;
+  }
+
+  #Box3 {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 950%;
+    text-align: center;
+    text-shadow: 0 0 20px white;
+    color: rgb(199, 196, 194);
+    width: 27%;
+    height: 140px;
+    border-left: 10px solid white;
+    border-bottom: 10px solid white;
+  }
+
+  #Box4 {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 950%;
+    text-align: center;
+    text-shadow: 0 0 20px white;
+    color: rgb(199, 196, 194);
+    width: 27%;
+    height: 140px;
+    border-right: 10px solid white;
+    border-bottom: 10px solid white;
+  }
+
+  #Box5 {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 950%;
+    text-align: center;
+    text-shadow: 0 0 20px white;
+    color: rgb(199, 196, 194);
+    width: 27%;
+    height: 140px;
+    border-bottom: 10px solid white;
+  }
+
+  #Box6 {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 950%;
+    text-align: center;
+    text-shadow: 0 0 20px white;
+    color: rgb(199, 196, 194);
+    width: 27%;
+    height: 140px;
+    border-left: 10px solid white;
+    border-bottom: 10px solid white;
+  }
+
+  #Box7 {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 950%;
+    text-align: center;
+    text-shadow: 0 0 20px white;
+    color: rgb(199, 196, 194);
+    width: 27%;
+    height: 140px;
+    border-right: 10px solid white;
+  }
+
+  #Box8 {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 950%;
+    text-align: center;
+    text-shadow: 0 0 20px white;
+    color: rgb(199, 196, 194);
+    width: 27%;
+    height: 140px;
+  }
+
+  #Box9 {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 950%;
+    text-align: center;
+    text-shadow: 0 0 20px white;
+    color: rgb(199, 196, 194);
+    width: 27%;
+    height: 140px;
+    border-left: 10px solid white;
+  }
+
+  #Winner {
+    display: none;
+    backdrop-filter: blur(0.2em);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.541);
+    width: 100%;
+    height: 100%;
+  }
+
+  #WinnerContent {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    padding: 1%;
+    border-radius: 2%;
+    border: 1px solid white;
+    box-shadow: 0 0 10px white;
+    font-size: 200%;
+    font-weight: bold;
+    text-shadow: 0 0 20px white;
+    color: rgb(199, 196, 194);
+  }
+
+  #WinnerPlayerName {
+    color: red;
+    text-shadow: 0 0 20px red;
+  }
+
+  #BackButton {
+    cursor: pointer;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    font-size: 200%;
+    font-weight: bold;
+    color: red;
+    text-shadow: 0 0 2px red;
+  }
+
+  #BackButton:hover {
+    text-shadow: 0 0 20px red;
+  }
+
+  #ResetButton {
+    display:none;
+    backdrop-filter: blur(0.1em);
+    filter: blur(0.04em);
+    cursor: not-allowed;
+    position: fixed;
+    bottom: 0%;
+    right: 1%;
+    font-size: 200%;
+    font-weight: bold;
+    color: red;
+    text-shadow: 0 0 2px red;
+  }
+
+  #ResetButton:hover {
+    text-shadow: 0 0 20px red;
+  }
+
+
+  #PlayerScores {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 200%;
+    font-weight: bold;
+    color: red;
+    text-shadow: 0 0 20px red;
+  }
+
+  #PSFlex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #P1Score {
+    text-shadow: 0 0 50px white;
+    color: rgb(199, 196, 194);
+  }
+
+  #P2Score {
+    text-shadow: 0 0 50px white;
+    color: rgb(199, 196, 194);
+  }
+
+  #TimeAndPauseButton {
+    position: fixed;
+    top: 0;
+    right: 0%;
+    font-size: 100%;
+    font-weight: bold;
+    text-shadow: 0 0 50px white;
+    color: rgb(199, 196, 194);
+  }
+
+  #TimeAndPauseButtonFlex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #Time {
+    font-size: 200%;
+    font-weight: bold;
+    text-shadow: 0 0 50px white;
+    color: rgb(199, 196, 194);
+  }
+
+  #PauseButton {
+    align-self: flex-end;
+    width: 38px;
+    font-size: 200%;
+    font-weight: bold;
+    color: red;
+    text-shadow: 0 0 20px red;
+  }
+
+  #PauseButton:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px red;
+    border: 1px solid red;
+  }
+
+  #PauseMenu {
+    display: none;
+    backdrop-filter: blur(0.2em);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.541);
+    width: 100%;
+    height: 100%;
+    animation-name: FadeIn;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+  }
+
+  #PauseMenuContent {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 150px;
+    padding: 1%;
+    border: 1px solid red;
+    box-shadow: 0 0 10px red;
+    font-size: 200%;
+    font-weight: bold;
+    text-shadow: 0 0 2px red;
+    color: rgb(199, 196, 194);
+  }
+
+  #ResumeButton:hover {
+    cursor: pointer;
+    text-shadow: 0 0 20px red;
+  }
+
+  #RestartButton:hover {
+    cursor: pointer;
+    text-shadow: 0 0 20px red;
+  }
+
+  #QuitButton:hover {
+    cursor: pointer;
+    text-shadow: 0 0 20px red;
+  }
+
+  #RestartButton {
+    cursor: pointer;
+    position: relative;
+    top: 20px;
+  }
+
+  #QuitButton {
+    cursor: pointer;
+    position: relative;
+    top: 40px;
+    color: red;
+  }
+
+}
+
+@media only screen and (max-width:500px) {
+  #Loader {
+    cursor: wait;
+    position: fixed;
+    left: 15%;
+    top: 50%;
+    font-weight: bold;
+    font-size: 300%;
+    animation-name: FadeIn;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+  }
+
+
+  #MainGameContents {
+    width: 110%;
+    left: 6%;
+    top: 100px;
+  }
+
+
+  #PlayerBox {
+    font-size: 180%;
+  }
+
+  #EditBut {
+    font-size: 75%;
+  }
+
+
+
+
+
+
+  #PlayerBox2 {
+    font-size: 180%;
+  }
+
+
+  #EditBut2 {
+    font-size: 75%;
+  }
+
+
+  #PopUpContent {
+    width: 50%;
+  }
+
+  #BackButton{
+    font-size: 150%; 
+  }
+
+  #ResetButton{
+    font-size: 150%; 
+  }
+
+
+  #PlayerScores {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 150%;
+    font-weight: bold;
+    color: red;
+    text-shadow: 0 0 20px red;
+  }
+
+  #PLAYER2NameAndScore{
+    position: fixed;
+    right:0;
+    bottom: 0;
+  }
+
+  #PSFlex {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #TimeAndPauseButton {
+    position: fixed;
+    top: 0;
+    right: 0%;
+    font-size: 100%;
+    font-weight: bold;
+    text-shadow: 0 0 50px white;
+    color: rgb(199, 196, 194);
+  }
+
+  #TimeAndPauseButtonFlex {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #Time {
+    position: relative;
+    right: 80%;
+  }
+
+  #PauseButton {
+    align-self: flex-end;
+    width: 38px;
+    font-size: 200%;
+    font-weight: bold;
+    color: red;
+    text-shadow: 0 0 20px red;
+  }
+
+  #PauseButton:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px red;
+    border: 1px solid red;
+  }
+
+  #PopUpContent {
+    position: relative;
+    top: 200px;
+    width: 30%;
+    height: 160px;
+    padding: 50px;
+    border-radius: 2%;
+    border: 1px solid white;
+    box-shadow: 0 0 10px white;
+    font-size: 150%;
+    text-shadow: 0 0 20px white;
+    color: rgb(199, 196, 194);
+  }
+
+}
