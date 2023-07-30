@@ -3,7 +3,7 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   background-color: black;
-  width: 98%;
+  width: 100%;
   height: 100%;
 }
 
@@ -1435,14 +1435,48 @@ body {
   }
 
 
-  #MainGameContents {
-    width: 110%;
-    left: 6%;
+  #Container {
+    width:90%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
     top: 100px;
+    left:0;
+  }
+
+
+  #MainGameContents {
+    position: fixed;
+    width: 100%;
+    left: 6%;
+    top: 65px;
+  }
+
+
+  #CYN {
+    bottom: 0px;
+  }
+
+  #YN {
+    bottom: 0px;
+  }
+
+  #NameInput {
+    bottom: 0px;
+  }
+
+  #NameInput2 {
+    bottom: 0px;
+  }
+
+  #PopUpButtons {
+    top: 20px;
   }
 
 
   #PlayerBox {
+    right: 0%;
+    width: 200%;
     font-size: 180%;
   }
 
@@ -1451,22 +1485,21 @@ body {
   }
 
 
-
+  #PlayerTurn {
+    font-size: 150%;
+  }
 
 
 
   #PlayerBox2 {
+    left: 5%;
+    width: 200%;
     font-size: 180%;
   }
 
 
   #EditBut2 {
     font-size: 75%;
-  }
-
-
-  #PopUpContent {
-    width: 50%;
   }
 
   #BackButton{
@@ -1480,7 +1513,7 @@ body {
 
   #PlayerScores {
     position: fixed;
-    bottom: 0;
+    bottom: 5px;
     left: 0;
     font-size: 150%;
     font-weight: bold;
@@ -1490,8 +1523,8 @@ body {
 
   #PLAYER2NameAndScore{
     position: fixed;
-    right:0;
-    bottom: 0;
+    right:2%;
+    bottom: 5px;
   }
 
   #PSFlex {
@@ -1502,7 +1535,7 @@ body {
   #TimeAndPauseButton {
     position: fixed;
     top: 0;
-    right: 0%;
+    right: 2%;
     font-size: 100%;
     font-weight: bold;
     text-shadow: 0 0 50px white;
@@ -1515,8 +1548,8 @@ body {
   }
 
   #Time {
-    position: relative;
-    right: 80%;
+    position: fixed;
+    right: 35%;
   }
 
   #PauseButton {
@@ -1536,10 +1569,10 @@ body {
 
   #PopUpContent {
     position: relative;
-    top: 200px;
-    width: 30%;
-    height: 160px;
-    padding: 50px;
+    top: 150px;
+    width: 90%;
+    height: 260px;
+    padding: 0%;
     border-radius: 2%;
     border: 1px solid white;
     box-shadow: 0 0 10px white;

@@ -86,13 +86,13 @@ export default function Home() {
                 <div id="Container">
                     <div id="PlayerBox">
                         <span id="PlayerName">PLAYER 1</span> <br />
-                        <span id="EditName">PLAYERNAME</span><br />
+                        <span id="EditName">NAME</span><br />
                         <span id="PlayerLetter">×</span><br />
                         <span id="EditBut">EDIT NAME</span>
                     </div>
                     <div id="PlayerBox2">
                         <span id="PlayerName2">PLAYER 2</span> <br />
-                        <span id="EditName2">PLAYERNAME</span><br />
+                        <span id="EditName2">NAME</span><br />
                         <span id="PlayerLetter2">O</span><br />
                         <span id="EditBut2">EDIT NAME</span>
                     </div>
