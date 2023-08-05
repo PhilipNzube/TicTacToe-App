@@ -1,10 +1,9 @@
-let cacheData = "MyAppCache";
+let cacheData = "TicTacToeAppCache";
 this.addEventListener("install", (event) => {
     event.waitUntil(
         caches.open(cacheData).then((cache) => {
             cache.addAll([
-                '/static/js/bundle.js',
-                '/static/css/main.6ffc16c5.css',
+                '/static/css/main.2ca5b9c3.css',
                 '/static/js/main.a42d07dc.js',
                 '/manifest.json',
                 '/ICON.png',

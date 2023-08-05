@@ -1521,10 +1521,15 @@ body {
     text-shadow: 0 0 20px red;
   }
 
+  #PLAYER1NameAndScore{
+    position: fixed;
+    bottom: 20px;
+  }
+
   #PLAYER2NameAndScore{
     position: fixed;
     right:2%;
-    bottom: 5px;
+    bottom: 20px;
   }
 
   #PSFlex {
